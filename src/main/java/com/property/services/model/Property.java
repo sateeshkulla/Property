@@ -27,6 +27,8 @@ public class Property {
     
     private Features features;
 
+    private String availability;
+
     public String getName() {
         return name;
     }
@@ -99,4 +101,17 @@ public class Property {
         this.features = features;
     }
 
+    public String getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(String availability) {
+        this.availability = availability;
+    }
+
+    @Override
+    public String toString() {
+        return "Property [name=" + name + ", location=" + location + ", owner=" + owner + ", pricing=" + pricing + ", bathNo=" + bathNo + ", bedroomNo="
+                + bedroomNo + ", areaLength=" + areaLength + ", appliances=" + appliances + ", features=" + features + ", availability=" + availability + "]";
+    }
 }
