@@ -5,6 +5,7 @@ import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 
 import com.property.services.api.PropertyApiImpl;
 import com.property.services.filters.AuthenticationFilter;
+import com.property.services.filters.CORSResponseFilter;
 
 /**
  * 
@@ -18,6 +19,7 @@ public class Application extends ResourceConfig {
      */
     public Application() {
         System.out.println("Registering resources..");
+        register(CORSResponseFilter.class);
         register(AuthenticationFilter.class);
         register(PropertyApiImpl.class);
         register(RolesAllowedDynamicFeature.class);
